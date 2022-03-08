@@ -106,3 +106,10 @@ form h2,h3{
 .signup-link:hover{
 	color: var(--color5);
 }
+@media screen and (max-width: 600px){
+	body{
+        background-size:cover;
+        height: 100vh;
+        background-repeat: no-repeat;
+    }
+}
