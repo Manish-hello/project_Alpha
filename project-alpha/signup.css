@@ -112,7 +112,7 @@ h1{
         right: 16%;
     }
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 599px){
      body{
         background-size:cover;
         height: 100vh;
