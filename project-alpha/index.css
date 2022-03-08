@@ -65,10 +65,19 @@ form h2,h3{
 	transform: scale(1.1);
 	border-color: var(--color3);
 }
+.eye-button img{
+	position:absolute;
+	height: 1.6rem;
+	width: 1.6rem;
+	top: 49%;
+	right: 20%;
+	cursor: pointer;
+}
 #login-btn{
 	position:relative;
 	cursor:pointer;
 	top:2.5rem;
+	left: 1.7rem;
 	border:none;
 	border-radius:2rem;
 	padding:.5rem 1.5rem;
@@ -92,4 +101,8 @@ form h2,h3{
 	font-family:'Ubuntu Condensed', sans-serif;
 	cursor: pointer;
 	color: white;
+	transition: .4s;
+}
+.signup-link:hover{
+	color: var(--color5);
 }
