@@ -221,6 +221,9 @@ body{
 .popup-body button:hover{
     background: rgba(0, 0, 0, 0.5);
 }
+.change-password{
+	display: none;
+}
 @media all and (max-width: 800px){
 	.top-banner .search{
 		display: none;
@@ -278,7 +281,7 @@ body{
     	display: flex;
     	align-items: center;
     	flex-direction: column;
-    	position: absolute;
+    	position: fixed;
     	left: -100%;
     	top: 8rem;
     	height: 5rem;
@@ -391,7 +394,7 @@ body{
     background: rgba(0, 0, 0, 0.5);
 }
 }
-@media all and (max-width: 400px){
+@media all and (max-width: 415px){
      .search{
     	position: relative;
     	left: -5rem;
@@ -402,10 +405,10 @@ body{
     	right: .3rem;
     }
     .setting-box{
-    	margin: 0rem -7.6rem;
+    	margin: 0rem -7.1rem;
     }
 }
-@media all and (max-width: 360px){
+@media all and (max-width: 376px){
     .search{
     	position: relative;
     	left: -5rem;
@@ -416,6 +419,6 @@ body{
     	right: .2rem;
     }
     .setting-box{
-    	margin: 0rem -8.2rem;
+    	margin: 0rem -7.9rem;
     }
 }
