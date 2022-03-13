@@ -32,14 +32,25 @@
 			<input type="text" placeholder="Search Teacher">
 			<button type="submit"><img src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"/></button>
 		</form>
-	</div>
-	<div class="logout" onclick="openPopup()">
-		<h1>Logout?</h1>
-	</div>
-	<div class="anonymous-profile">
+	    </div>
+	    <div class="anonymous-profile">
 			<img src="image3.png" alt="">
 	    </div>
+	    <!-- <div class="logout" onclick="openPopup()">
+		      <h1>Logout?</h1>
+	    </div> -->
+	    <div class="setting-btn">
+	    	<img src="https://img.icons8.com/windows/32/000000/settings--v2.png"/ class="settingjs" onclick="setting()">
+	   	    </div>
 	</div>
+	<div class="setting-box">
+				<div class="logout" onclick="openPopup()">
+					<h1>Logout<img src="https://img.icons8.com/material/24/000000/exit.png"/></h1>
+				</div>
+                <div class="change-password">
+                	<h1>Change Password</h1>
+                </div>
+			</div>
 	<div class="slider">
 		<div class="slide-track">
 			<div class="slide">
@@ -80,8 +91,13 @@
     	let hamburger=document.querySelector(".hamburger-menu");
     	let dropdown=document.querySelector(".drop-down");
     	let popup=document.querySelector("#popup");
+    	let settingg=document.querySelector(".setting-box");
     	function hamburgerM(){
     		dropdown.classList.toggle("active");
+    		settingg.classList.remove("active")
+    	}
+    	function setting(){
+    		settingg.classList.toggle("active");
     	}
     	function openPopup(){
     		popup.classList.add("open-popup");
