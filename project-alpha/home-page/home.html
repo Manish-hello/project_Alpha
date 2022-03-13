@@ -19,7 +19,7 @@
 			<button type="submit"><img src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"/></button>
 		</form>
 	</div>
-	<div class="logout">
+	<div class="logout" onclick="openPopup()">
 		<h1>Logout?</h1>
 	</div>
 	<div class="anonymous-profile">
@@ -33,7 +33,7 @@
 			<button type="submit"><img src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"/></button>
 		</form>
 	</div>
-	<div class="logout">
+	<div class="logout" onclick="openPopup()">
 		<h1>Logout?</h1>
 	</div>
 	<div class="anonymous-profile">
@@ -68,12 +68,26 @@
 			</div>
 		</div>
 	</div>
+	<div class="logout-popup">
+		<div class="popup-body" id="popup">
+			<h1>Are you sure?</h1>
+			<button class="yes" onclick="closePopup()">Yes</button>
+			<button class="no" onclick="closePopup()">No</button>
+		</div>
+	</div>
     </div>
     <script>
     	let hamburger=document.querySelector(".hamburger-menu");
     	let dropdown=document.querySelector(".drop-down");
+    	let popup=document.querySelector("#popup");
     	function hamburgerM(){
     		dropdown.classList.toggle("active");
+    	}
+    	function openPopup(){
+    		popup.classList.add("open-popup");
+    	}
+    	function closePopup(){
+    		popup.classList.remove("open-popup");
     	}
     </script>
 </body>

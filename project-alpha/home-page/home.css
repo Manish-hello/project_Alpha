@@ -179,6 +179,49 @@ body{
 	transform: scale(1.1);
 	cursor: pointer;
 }
+.popup-body{
+	margin: 3rem auto;
+	width: 50%;
+	height: 10rem;
+	background: white;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	position: relative;
+	top:-35rem;
+	transform: translate(0rem,0rem) scale(0.1);
+	text-align: center;
+	font-family:'Ubuntu Condensed', sans-serif;
+	z-index: 2;
+	visibility: hidden;
+	transition: transform 0.4s,top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: -20rem;
+    transform: translate(0rem,0rem) scale(1);
+}
+.popup-body h1{
+	position: relative;
+	top: 1rem;
+	color: linear-gradient(top left rgba(5, 6, 7, 1.0) rgba(45,67,89,1.0));
+}
+.popup-body button{
+	width: 30%;
+	margin-top: 40px;
+	padding: 10px 0px;
+	background: green;
+	color: greenyellow;
+	border:0;
+	outline: none;
+	font-size: 18px;
+	cursor: pointer;
+	border-radius: 2rem;
+	transition: .3s;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.popup-body button:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
 @media all and (max-width: 800px){
 	.top-banner .search{
 		display: none;
@@ -198,7 +241,7 @@ body{
     }
     .drop-down{
     	display: flex;
-    	position: absolute;
+    	position: fixed;
     	height: 10rem;
     	width: 100%;
     	background: rgba(0, 0, 0, .5);
