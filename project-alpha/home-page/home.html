@@ -12,8 +12,22 @@
     	<div class="logo">
     		<h1>Teacher Rater</h1>
     	</div>
-    	<img src="https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/32/000000/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png"/ class="hamburger-menu">
+    	<img src="https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/32/000000/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png"/ class="hamburger-menu" onclick="hamburgerM()">
     	<div class="search">
+		<form action="" class="search-bar">
+			<input type="text" placeholder="Search Teacher">
+			<button type="submit"><img src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"/></button>
+		</form>
+	</div>
+	<div class="logout">
+		<h1>Logout?</h1>
+	</div>
+	<div class="anonymous-profile">
+			<img src="image3.png" alt="">
+	    </div>
+	</div>
+	<div class="drop-down">
+		<div class="search">
 		<form action="" class="search-bar">
 			<input type="text" placeholder="Search Teacher">
 			<button type="submit"><img src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"/></button>
@@ -55,5 +69,12 @@
 		</div>
 	</div>
     </div>
+    <script>
+    	let hamburger=document.querySelector(".hamburger-menu");
+    	let dropdown=document.querySelector(".drop-down");
+    	function hamburgerM(){
+    		dropdown.classList.toggle("active");
+    	}
+    </script>
 </body>
 </html>

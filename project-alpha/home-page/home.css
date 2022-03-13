@@ -128,7 +128,12 @@ body{
 .anonymous-profile img{
 	height: 100%;
 	width: 100%;
+	position: absolute;
+	top: .2rem;
 	cursor: pointer;
+}
+.drop-down{
+	display: none;
 }
 .slider{
 	height: 20rem;
@@ -174,20 +179,69 @@ body{
 	transform: scale(1.1);
 	cursor: pointer;
 }
-@media all and (max-width: 600px){
-	.search{
+@media all and (max-width: 800px){
+	.top-banner .search{
 		display: none;
 	}
-	.anonymous-profile{
+	.top-banner .anonymous-profile{
 		display: none;
 	}
-	.logout{
+	.top-banner .logout{
 		display: none;
 	}
     .hamburger-menu{
-        display: flex;
+        display: block;
         align-items: center;
         position: absolute;
-        right: 5px;
+        right: 30px;
+        cursor: pointer;
+    }
+    .drop-down{
+    	display: flex;
+    	position: absolute;
+    	height: 10rem;
+    	width: 100%;
+    	background: rgba(0, 0, 0, .5);
+    	left: -100%;
+    	z-index: 1;
+    	flex-direction: column;
+    	text-align: center;
+    }
+    .anonymous-profile{
+    	position: relative;
+    	left: 1rem;
+    	top: -0.8rem;
+    }
+    .search{
+    	position: relative;
+    	left: -5rem;
+    	top: 1.5rem;
+    }
+    .logout{
+    	position: absolute;
+    	right: 1rem;
+    	top: 6rem;
+    	background: rgba(255, 255, 255,0.5);
+    	border-radius:2rem;
+    }
+    .drop-down.active{
+    	left: 0;
+    	transform: 1s ease;
+    }
+}
+@media all and (max-width: 400px){
+     .search{
+    	position: relative;
+    	left: -5rem;
+    	top: 1.5rem;
+    	width: 18rem;
+    }
+}
+@media all and (max-width: 360px){
+    .search{
+    	position: relative;
+    	left: -5rem;
+    	top: 1.5rem;
+    	width: 15rem;
     }
 }
