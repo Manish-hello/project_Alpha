@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu+Condensed&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior:smooth;
+}
+:root{
+    --color1:rgba(220, 20, 60,1.0);
+    --color2: rgba(255, 240, 245,1.0);
+    --color3: rgba(95, 158, 160,1.0);
+    --color4: rgba(0, 255, 127,1.0);
+    --color5: rgba(255, 215, 0,.8);
+}
+body{
+    background: rgba(253, 244, 220);
+}
+.container{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+.top-banner{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	height: 4rem;
+	width: 100%;
+	background: white;
+	display: flex;
+	align-items: center;
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+.logo h1{
+	font-family: 'Baloo 2', cursive;
+	letter-spacing: 1px;
+	font-weight: bolder;
+	padding-left: 15px;
+	padding-top: 5px;
+	cursor: pointer;
+}
+.hamburger-menu{
+	display: none;
+}
+.search{
+	width: 20rem;
+	float: right;
+	position: absolute;
+	right: 15rem;
+	top: 1rem;
+	margin-left: 10rem;
+	border: 1px solid black;
+	background: rgba(220, 246, 253);
+	border-radius: 5rem;
+}
+.search-bar input{
+	font-family:'Ubuntu Condensed', sans-serif;
+	letter-spacing: 1px;
+	width: 16rem;
+	height: 2rem;
+	background: transparent;
+	border: none;
+	color: rgba(0, 0, 0, .5);
+	outline: none;
+	position: relative;
+	left: 20px;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+::placeholder{
+	font-size: 1.1rem;
+	font-weight: bold;
+	font-style: italic;
+	color: var(--color3);
+}
+.search-bar button{
+	position: absolute;
+	left: 90%;
+	cursor: pointer;
+	background: none;
+	border: none;
+	top: 4px;
+}
+.search-bar button img{
+	height: 1.5rem;
+	width: 1.5rem;
+}
+.logout{
+	height: 2rem;
+	width: 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	float: right;
+	right: 30px;
+	top: 15px;
+	border-radius:.4rem;
+	border: 1px solid black;
+	transition: .5s ease;
+}
+.logout:hover{
+	background: rgba(0, 0, 0, 0.2);
+}
+.logout h1{
+	color: black;
+	font-weight: bolder;
+	font-size: 1.3rem;
+	cursor: pointer;
+	font-family: 'Baloo 2', cursive;
+}
+.anonymous-profile{
+	position: absolute;
+	right: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 2.5rem;
+	width: 2.5rem;
+	border: 2px solid var(--color1);
+	border-radius: 50%;
+	overflow: hidden;
+}
+.anonymous-profile img{
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+.slider{
+	height: 20rem;
+	margin: 3rem auto;
+	position: relative;
+	width: 70%;
+	display:grid;
+	place-items: center;
+	background: floralwhite;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.slide-track{
+	display: flex;
+	margin: 3rem auto;
+	width: calc(250px *16);/*slide track width= total number of slides(8*2=16)*individual slide width*/
+	animation: scroll 40s linear infinite;
+}
+@keyframes scroll{
+	0%{
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateX(calc(-250px*4));/*move the slide leftward(-250px) by half(8 images/2=4) of its width*/
+	}
+}
+.slide{
+	height: 10rem;
+	width: 20rem;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	perspective: 60px;
+}
+.slide img{
+	height: 9rem;
+	width: 100%;
+	object-fit: contain;
+	transition: .6s;
+}
+.slide img:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+}
+@media all and (max-width: 600px){
+	.search{
+		display: none;
+	}
+	.anonymous-profile{
+		display: none;
+	}
+	.logout{
+		display: none;
+	}
+    .hamburger-menu{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 5px;
+    }
+}
