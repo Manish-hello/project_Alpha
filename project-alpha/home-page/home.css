@@ -225,9 +225,9 @@ body{
 	display: none;
 }
 @media all and (max-width: 800px){
-	.top-banner .search{
-		display: none;
-	}
+	 .top-banner>.search{
+	    display: none;
+    }
 	.top-banner .anonymous-profile{
 		display: none;
 	}
@@ -247,7 +247,7 @@ body{
     	height: 6rem;
     	width: 100%;
     	background: rgba(0, 0, 0, .5);
-    	left: -100%;
+    	left: -200%;
     	z-index: 1;
     	flex-direction: column;
     	text-align: center;
@@ -394,7 +394,7 @@ body{
     background: rgba(0, 0, 0, 0.5);
 }
 }
-@media all and (max-width: 415px){
+@media all and (max-width: 418px){
      .search{
     	position: relative;
     	left: -5rem;
